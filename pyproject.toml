@@ -63,18 +63,14 @@ Homepage = "https://github.com/pybamm-team/pybamm-reservoir-example"
 Discussions = "https://github.com/pybamm-team/pybamm-reservoir-example/discussions"
 Changelog = "https://github.com/pybamm-team/pybamm-reservoir-example/releases"
 
-[project.entry-points."parameter_sets"]
+[project.entry-points."pybamm_parameter_sets"]
 Chen2020 = "pybamm_reservoir_example.parameters.input.Chen2020:get_parameter_values"
-
-[project.entry-points."models"]
-SPM = "pybamm_reservoir_example.models.input.SPM:SPM"
-BasicReservoir = "pybamm_reservoir_example.models.input.BasicReservoir:BasicReservoir"
+ReservoirParams = "pybamm_reservoir_example.parameters.input.ReservoirParameters:get_parameter_values"
 
 [project.entry-points."pybamm_models"]
+SPM = "pybamm_reservoir_example.models.input.SPM:SPM"
+BasicReservoir = "pybamm_reservoir_example.models.input.BasicReservoir:BasicReservoir"
 Reservoir = "pybamm_reservoir_example.models.input.Reservoir:Reservoir"
-
-[project.entry-points."pybamm_parameter_sets"]
-ReservoirParams = "pybamm_reservoir_example.parameters.input.ReservoirParameters:get_parameter_values"
 
 [tool.hatch]
 version.source = "vcs"

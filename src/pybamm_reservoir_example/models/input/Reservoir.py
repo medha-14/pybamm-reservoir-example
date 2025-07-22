@@ -2,6 +2,18 @@ import pybamm
 
 
 class Reservoir(pybamm.BaseModel):
+    """
+    Simple stoichiometric reservoir model for a lithium-ion battery.
+
+    This model captures the evolution of stoichiometries in the negative and
+    positive electrodes due to applied current, using a lumped approach with
+    simplified voltage dynamics.
+
+    Parameters
+    ----------
+    name : str, optional
+        The name of the model.
+    """
     def __init__(self):
         super().__init__(name="Reservoir model")
 

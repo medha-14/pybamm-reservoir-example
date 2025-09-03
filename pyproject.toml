@@ -32,7 +32,7 @@ classifiers = [
   "Topic :: Scientific/Engineering",
 ]
 dynamic = ["version"]
-dependencies = ["pybamm @ git+https://github.com/pybamm-team/PyBaMM.git@develop#egg=pybamm",]
+dependencies = ["pybamm>=25.8",]
 
 
 [project.optional-dependencies]
@@ -75,7 +75,7 @@ Reservoir = "pybamm_reservoir_example.models.input.Reservoir:Reservoir"
 [tool.hatch]
 version.source = "vcs"
 build.hooks.vcs.version-file = "src/pybamm_reservoir_example/_version.py"
-envs.default.dependencies = ["pybamm @ git+https://github.com/pybamm-team/PyBaMM.git@develop#egg=pybamm",]
+envs.default.dependencies = ["pybamm>=25.8",]
 
 [tool.hatch.metadata]
 allow-direct-references = true
